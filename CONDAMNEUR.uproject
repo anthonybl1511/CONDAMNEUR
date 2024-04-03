@@ -3,6 +3,17 @@
 	"EngineAssociation": "5.2",
 	"Category": "",
 	"Description": "",
+	"Modules": [
+		{
+			"Name": "CONDAMNEUR",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Engine",
+				"GameplayAbilities"
+			]
+		}
+	],
 	"Plugins": [
 		{
 			"Name": "ModelingToolsEditorMode",
