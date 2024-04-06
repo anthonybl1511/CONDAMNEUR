@@ -34,6 +34,15 @@ public:
 	FGameplayAttributeData Armor;
 	ATTRIBUTE_ACCESSORS(UFirstPersonAttributeSet, Armor);
 
+	UPROPERTY(BlueprintReadOnly, Category = "Attributes")
+	FGameplayAttributeData Bullets;
+	ATTRIBUTE_ACCESSORS(UFirstPersonAttributeSet, Bullets);
+
+	UPROPERTY(BlueprintReadOnly, Category = "Attributes")
+	FGameplayAttributeData Plasma;
+	ATTRIBUTE_ACCESSORS(UFirstPersonAttributeSet, Plasma);
+
 	virtual void PreAttributeChange(const FGameplayAttribute& Attribute, float& NewValue) override;
 	virtual bool PreGameplayEffectExecute(struct FGameplayEffectModCallbackData& Data) override;
+	virtual void PostGameplayEffectExecute(const struct FGameplayEffectModCallbackData& Data) override;
 };

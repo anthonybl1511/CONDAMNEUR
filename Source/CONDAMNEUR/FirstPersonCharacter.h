@@ -26,6 +26,18 @@ public:
 
 	UAbilitySystemComponent* GetAbilitySystemComponent() const override;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Attributes")
+	int MaxHealth = 100;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Attributes")
+	int MaxArmor = 50;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Attributes")
+	int MaxBullets = 100;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Attributes")
+	int MaxPlasma = 20;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
